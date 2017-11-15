@@ -1,0 +1,135 @@
+<!doctype html>
+<head>
+  <title>Marquet Reid - Random Quote Machine</title>
+  <meta charset="UTF-8">
+    <meta name="keywords" content="Marquet Reid, Cyber Intelligence, Web Developer, Web Designer, Javascript, Programming, Coding">
+    <meta name="description" content="Online home of Marquet Reid">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="quote.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body class="backcolor">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+        var q = '';
+        var a = '';
+        var quotes=[{quote:"Difficult takes a day, impossible takes a week.", by:"Jay-Z"},
+            {quote:"Turnin' nothing' into something' is God work, and you get nothin' without struggle and hard work", by:"Nas"},
+            {quote:"If you don't like something, change it. If you can't change it, change your attitude.", by:"Maya Angelou"},
+            {quote:"Self-esteem makes me super, superb, and supreme.", by:"Rakim"},
+            {quote:"We ain't picture perfect, but we worth the picture still", by:"J. Cole"},
+            {quote:"I will not lose, for even in defeat, there’s a valuable lesson learned, so it evens up for me.", by:"Jay-Z"},
+            {quote: "You know life is what we make it, and a chance is like a picture, it’d be nice if you just take it.", by:"Drake"},
+            {quote: "Stay far from timid, only makes moves when your hearts in it, and live the phrase 'Sky's the limit'", by:"Notorious B.I.G."},
+            {quote: "Sunny days wouldn't be special if it wasn't for rain. Joy woulnd't feel so good if it wasn't for pain.", by:"50 Cent"}];
+            var ind  = Math.floor(Math.random()*quotes.length);
+            
+            q = quotes[ind].quote;
+            a = quotes[ind].by;
+            document.getElementById('quote').innerHTML = '"'+q+'"';
+            document.getElementById('author').innerHTML = "-"+a;
+            $(".backcolor" ).css("background-color","#070657");
+        	$('#newquote').on("click", function() {
+            var ind  = Math.floor(Math.random()*quotes.length);
+            q = quotes[ind].quote;
+            a = quotes[ind].by;
+            document.getElementById('quote').innerHTML = '"'+q+'"';
+            document.getElementById('author').innerHTML = "-"+a;
+            switch(a){
+               case "Jay-Z": $(".backcolor" ).css("background-color","#070657");break;
+               case "Nas": $(".backcolor" ).css("background-color","#27ae60");break;
+               case "Maya Angelou": $(".backcolor" ).css("background-color","#2c3e50");break;
+               case "Rakim": $(".backcolor" ).css("background-color","#f39c12");break;
+               case "J. Cole": $(".backcolor" ).css("background-color","#a1b2c3");break;
+               case "Drake": $(".backcolor" ).css("background-color", "#16a085");break;
+               case "Notorious B.I.G.": $(".backcolor" ).css("background-color", "purple");break;
+               case "50 Cent": $(".backcolor" ).css("background-color", "black");break;
+            }
+            
+        });
+         $('#newquote').on("mouseenter", function() {
+            $('#newquote').css("opacity","0.9");
+            
+        });
+         $('#newquote').on("mouseleave", function() {
+            $('#newquote').css("opacity","1");
+            
+        });
+        
+         $('#tweet').on("mouseenter", function() {
+            $('#tweet').css("opacity","0.9");
+            
+        });
+         $('#tweet').on("mouseleave", function() {
+            $('#tweet').css("opacity","1");
+            
+        });
+
+        $('#tweet').on("click", function() {
+            var link = 'https://twitter.com/intent/tweet?text=' +'"'+ q +'"'+ ' ' + "-"+a;
+            window.open(link, 'twitter');
+            
+        });
+           
+    });
+</script>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand blue-text" href="#home">Marquet Reid</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+
+        </div>   
+
+            <div class="collapse navbar-collapse" id="nav-collapse">
+<!-- Individual Navbar elements -->
+            <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="home.html#home">Home</a></li>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="home.html#resume">Resume</a></li>
+            <li><a href="home.html#portfolio">Portfolio</a></li>
+            <li><a href="home.html#connect">Connect</a></li>
+            <li><a href="http://www.marquetreid.com/blog">Blog</a></li>
+            </ul>
+            </div> 
+    </div> <!-- Container fluid-->
+
+</nav>
+
+<div class="col-xs-6 col-xs-offset-3 qbox">
+  <div id="quote">
+  <span id="message"></span>
+  </div>
+  <div id="author">
+  </div>
+  <button id="newquote">New Quote</button>
+  <button id="tweet"><i class="fa fa-twitter"></i></button>
+
+  <br><br><br><br><br>
+  <footer class="footer">
+    <a href="https://www.linkedin.com/in/marquetreid" target="_blank"><img src="incircle.png" alt="Join me on linkedin"></a>
+    <a href="https://www.twitter.com/codenamequet" target="_blank"><img src="twitter-circle.png" alt="Follow me on Twitter"></a>
+    <a href="https://www.github.com/codenamequet" target="_blank"><img src="github32.png" alt="Check out My Code on Github"></a>
+</footer>
+</div>
+    
+<div class="footer">
+    <a href="https://www.linkedin.com/in/marquetreid" target="_blank"><img src="incircle.png" alt="Join me on linkedin"></a>
+    <a href="https://www.twitter.com/codenamequet" target="_blank"><img src="twitter-circle.png" alt="Follow me on Twitter"></a>
+    <a href="https://www.github.com/codenamequet" target="_blank"><img src="github32.png" alt="Check out My Code on Github"></a>
+</div>
+
+</body>
+
+</html>
