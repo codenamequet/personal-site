@@ -61,6 +61,7 @@ nav a:hover {
 .connect {
     font-size: 1.5em; /* 24/16 */
     background: #f1f1f1;
+    padding: 10px;
 }
 .contact-form {
     display: block;
@@ -70,7 +71,7 @@ nav a:hover {
 .confirmation {
     color: white;
     background: rgba(0, 0, 0, 0.5);
-    margin: 200px auto auto auto;
+    margin: 200px auto;
 }
 #name{
    width: 100%; 
