@@ -13,7 +13,7 @@ nav a:hover {
     color: blue !important;
 }
 .home {
-    background: url(../onwoodbackground.jpg);
+    background: url(onwoodbackground.jpg);
     background-repeat:no-repeat;
     background-size:100%;
     background-position:fixed;
